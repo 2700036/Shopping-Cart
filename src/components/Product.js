@@ -9,7 +9,10 @@ export default function Product({product}) {
       <img src={product.image_url} alt={product.name} />
       <h3>{product.name}</h3>
       <div className='product-buttons'>
-        <button className='remove' onClick={()=>removeItem(product.sku)}>Remove</button>
+        {q > 0 
+        ? <button className='remove' onClick={()=>removeItem(product.sku)}>Remove</button>
+        : <div/>
+      }
         <button className='add' onClick={()=>addItem(product.sku)}>{`Add to Cart (${q})`}</button>
       </div>
     </div>
