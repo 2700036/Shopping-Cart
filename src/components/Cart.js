@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Cart() {
+  // const { addItem, removeItem, findItem, totalPrice, cart } = useCart();
   return (
     <div className="cart">
       {/* show cart items here */}
